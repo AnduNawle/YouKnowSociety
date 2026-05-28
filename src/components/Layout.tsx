@@ -17,6 +17,25 @@ export default function Layout({ children }: LayoutProps) {
       
       {/* Background Life Layer */}
       <div className="background-life">
+        {/* Slowly pacing ambient tech connectivity network image */}
+        <motion.img
+          src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=2072&auto=format&fit=crop"
+          alt=""
+          referrerPolicy="no-referrer"
+          className="absolute inset-0 w-full h-full object-cover opacity-[0.07] mix-blend-screen pointer-events-none"
+          animate={{
+            scale: [1.05, 1.15, 1.05],
+            rotate: [0, 2, 0],
+            x: [0, 20, 0],
+            y: [0, -20, 0]
+          }}
+          transition={{
+            duration: 30,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+        />
+
         <div className="blob w-96 h-96 bg-blue-600 top-0 -left-20 animation-delay-2000" />
         <div className="blob w-72 h-72 bg-indigo-600 top-1/2 left-1/3 animation-delay-4000" />
         <div className="blob w-[30rem] h-[30rem] bg-blue-900 bottom-0 right-0" />
